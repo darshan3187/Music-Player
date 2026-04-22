@@ -1,5 +1,6 @@
 import { lazy, Suspense, useState } from 'react';
 import { ListMusic } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import AudioVisualizer from './components/AudioVisualizer';
 import TrackInfo from './components/TrackInfo';
 import PlayerControls from './components/PlayerControls';
@@ -62,6 +63,7 @@ function App() {
   return (
     <PlayerProvider>
       <AppContent />
+      <Analytics />
     </PlayerProvider>
   );
 }
